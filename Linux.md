@@ -1,4 +1,6 @@
-# Terminal
+# Linux
+
+## Terminal
 
 - pwd : print working directory
 - cd : change directory
