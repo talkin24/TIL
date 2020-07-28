@@ -61,3 +61,6 @@ Key/Value의 pair 자료구조
       print(key, val)
   
   ```
+
+- Dictionary comprehension을 사용 시, elif는 else if로 써야한다. 또한 for문이 뒤로 와야함
+  `{키: 값 if 조건식 else 식 if 조건식 else 식 if ... else ... for 변수 in iterable}`

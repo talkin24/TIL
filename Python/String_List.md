@@ -16,6 +16,8 @@
 - `'separator'.join(iterable)`: 문자열로 반환
 - `.capitalize()`, `.title()`
 - `.swapcase()`
+- 기타 문자열 관련 검증 메소드: 참/거짓 반환
+  `.isalpha(), .isdecimal(), .isdigit(), .isnumeric(), .isspace(), .isupper(), .istitle(), .islower()`
 
 
 
@@ -45,4 +47,16 @@
   - mutable한 자료형은 복제된 데이터가 바뀌면 원본도 바뀜
   - 단, slice 사용하면 원본과 달라짐
 
-- map 사용시 첫번째 인자는 함수의 호출이 아닌, 함수의 이름
+- map 
+
+  - 첫번째 인자는 함수의 호출이 아닌, 함수의 이름
+  - 사용자 정의 함수도 사용가능함
+
+-  filter(function, iterable)
+
+  - 특정함수를 적용했을 때, iterable에서 반환된 결과가 True인 것들만 반환
+
+- zip(*iterables)
+
+  - 결과는 튜플의 모음으로 구성됨
+  - iterable간 짝이 안맞으면 짧은 것 기준으로 반환됨(긴 것 기준으로 맞출 수도 있지만 사용할 일이 없음)
