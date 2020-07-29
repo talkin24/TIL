@@ -10,4 +10,3 @@
 - clear = ctrl + L
 - python -V : version check
 - touch 파일명.확장자 : 빈파일 만들기
-- 
