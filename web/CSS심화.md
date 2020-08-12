@@ -39,7 +39,7 @@ cf) `lorem`: dummy data 생성, ex) lorem100
   - `align`: 교차 축 정렬
     - `-content`: 여러 줄
     - `-items`: 한 줄
-    - `-self`: 각 아이템 한 개
+    - `-self`: 각 아이템 한 개ㄹ
   - `flex-wrap`: item이 flex영역을 벗어날 때 개행을 해서라도 안쪽으로 넣어주는 것이 wrap, 안 넣는 것이 nowrap
   - `flex-flow`: `flex-direction`과 `flex-wrap`의 shorthand
     ex) `flex-flow: column wrap;`
