@@ -6,7 +6,9 @@
 
   `from django.urls import path, include` `include()`를 사용해서 상세 경로를 구분 가능
 
+- app 간 동일한 page혹은 경로를 가지고 있을 때 우선순위는 settings.py 내 app 등록 순으로 적용됨
 
+  
 
 
 

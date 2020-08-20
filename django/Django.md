@@ -39,8 +39,9 @@
 
 - `python manage.py startapp 앱이름s`: 앱 만들기. 이름은 복수형이 좋음
 - 해당 앱 폴더내
-  - `views.py`: 장고에서 가장 오래 머물고, 가장 많은 코드를 작성할 부분
-
+  
+- `views.py`: 장고에서 가장 오래 머물고, 가장 많은 코드를 작성할 부분
+  
 - 프로젝트에 앱등록 해야 앱 사용 가능 -> `settting.py`
 
   - 순서 중요 by convention
@@ -63,10 +64,13 @@
   - django는 콤마가 마지막에 옮(trailing comma)
 
 - 언어 변경
+  
   - `settings.py`에서 `LANGUAGE_CODE`수정
+  - language_code에 따라 글자 수 다르게 인식하는 문제 발생할 수 있음
 - 시간 변경
-  - `settings.py`에서 `TIME_ZONE`수정
-
+  
+- `settings.py`에서 `TIME_ZONE`수정
+  
 - 장고 import convention
 
   ```
@@ -144,6 +148,7 @@ ex) `{pick: pick,}`
 ### Syntax
 
 - variable: `{{ }}`
+  - list에서 변수 하나씩 꺼낼때 `[]`이 아닌 `.`을 이용한다
 - filter: `{{ variable|filter }}` 
 - tags: `{% tag %}` 
   - for, if 등..(python과 외양만 같음)
@@ -152,7 +157,6 @@ ex) `{pick: pick,}`
   - `forloop.counter`: 번호 매기기
     - `counter0`: 0부터 시작
   - `{% empty %}`: if 없이 data가 비어있을 때 지정가능
-
 - 장고에서 template system은 표현을 제어하는 도구이자 표현에 관련된 로직일뿐. 여기서는 이러한 기본목표를 넘어서는 기능을 지원해선 안됨
 
 
