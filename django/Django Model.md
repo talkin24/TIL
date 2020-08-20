@@ -25,8 +25,9 @@ ORM(Object-Relational-Mapping)
 ![image-20200819102422581](C:\Users\cresc\AppData\Roaming\Typora\typora-user-images\image-20200819102422581.png)
 
 - 객체지향 프로그래밍 언어를 사용하여, 호환되지 않는 유형의 시스템 간에 (Django-SQL) 데이터를 변환하는 프로그래밍 기술. 가상 DB 생성
-  - 장점 : SQL을 몰라도 DB에 접근 가능, SQL의 절차적 접근이 아닌 객체 지향적 접근으로 인한 높은 생산성
-
+  
+- 장점 : SQL을 몰라도 DB에 접근 가능, SQL의 절차적 접근이 아닌 객체 지향적 접근으로 인한 높은 생산성
+  
 - 단점: ORM만으로 완전한 서비스를 구현하기 어려운 경우가 있음
 
 - BUT: 현대 대부분의 framework는 ORM 사용. why? **생산성**
@@ -123,3 +124,51 @@ cf) sqlite extention을 사용하면 vscode 내 explorer에서 db확인 가능
   - DB로부터 전달받은 객체 목록
   - 조회, 필터 정렬 등 수행
   - 이것의 객체는 0개, 1개 혹은 여러개 일 수 있음
+  
+- 일반 python shell에서 테스트 불가능 => Django shell-plus 사용
+
+  
+
+  cf) ipython: python shell, 빠름
+
+  ```shell
+  $python -i
+  ...
+  exit()
+  ```
+
+  
+
+
+
+- pk는 재사용 되지 않는다
+
+
+
+- admin page에서 더 편하게 CRUD테스트를 할 수 있다
+
+  ```shell
+  $python manage.py createsuperuser
+  사용자 이름 (leave blank to use 'cresc'): admin
+  이메일 주소: 
+  Password: 
+  Password (again): 
+  비밀번호가 너무 짧습니다. 최소 8 문자를 포함해야 합니다.
+  비밀번호가 너무 일상적인 단어입니다.
+  비밀번호가 전부 숫자로 되어 있습니다.
+  Bypass password validation and create user anyway? [y/N]: y
+  Superuser created successfully.
+  ```
+
+- `/admin/` page에서 이용가능, 단 ariticle 조작은 추가 설정 필요
+
+  ```python
+  # admin.py
+  from django.contrib import admin
+  from .models import Article # 명시적 상대경로 표현
+  
+  # Register your models here.
+  admin.site.register(Article)
+  ```
+
+- 반드시 DB 구축하고 superuser 만들기!
