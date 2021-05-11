@@ -44,6 +44,8 @@
 
 - `git remote add origin https://github.com/talkin24/TIL.git` : origin이라는 이름으로 원격 저장소 추가. 뒤에 주소 알려줌
 
+- `git remote set-url origin ~`: remote 주소 재설정(위 add보다 강력)
+
 - `git remote -v` : 원격 연결 상태 확인
 
 - `git push origin master` : origin이라는 원격저장소에 master 브랜치에 있는 모든 것을 push해줘
